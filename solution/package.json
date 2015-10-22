@@ -1,0 +1,34 @@
+{
+  "name": "fay-solution",
+  "version": "1.0.0",
+  "description": "flux challenge solution",
+  "repository": "https://github.com/FayP/flux-challenge.git",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "node_modules/.bin/watchify . -o dist/bundle.js -v -d",
+    "build": "node_modules/.bin/browserify app.js > dist/index.js"
+  },
+  "browserify": {
+    "transform": [
+      "babelify",
+      "reactify"
+    ]
+  },
+  "keywords": [
+    "flux"
+  ],
+  "author": "Fay Pickering <fay.pickering@xero.com>",
+  "license": "ISC",
+  "dependencies": {
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0",
+    "freezer-js": "^0.8.2",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "reactify": "^1.1.1",
+    "request": "^2.65.0",
+    "watchify": "^3.4.0",
+    "ws": "^0.8.0"
+  }
+}
